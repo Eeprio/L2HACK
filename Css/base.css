@@ -1,0 +1,137 @@
+*{margin: 0; padding: 0; font-size:0; position: relative; text-decoration:none;}
+
+*hover {text-decoration:none}
+body 
+{
+	font-family:Arial, Helvetica, sans-serif;
+	background-color: #fff;
+
+}
+
+.corpo 
+{
+	border: solid 2px #333333; 
+	display:block; padding:20px; 
+	margin-top: 20px;
+	background-color: #fff;
+	align-items: center;
+	text-align: center;
+
+}
+	
+	.corpo h1
+	{
+		font-size: 24px; 
+		margin-bottom:20px;
+		padding: 10px;
+	}
+	.corpo p 
+	{
+		font-size: 18px;
+		color: #000;
+		padding: 5px;
+		}
+	
+.rodape 
+{
+	background-color: #000; 
+	color: #fff; text-align:center; 
+	font-size:24px; 
+	padding:20px; 
+	margin-top: 20px;
+}
+
+		.rodape * 
+{
+	color: #fff; 
+	font-size:16px;
+	padding: 10px;
+}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+.corpo .dados .foto img 
+{
+	width: 150px; 
+	height:150px; 
+	border-radius: 50%;
+}
+
+.corpo .dados .fotol img 
+{
+	width: 150px;
+	height:150px;
+}
+
+.corpo .dados .foto, .corpo .dados .infos 
+{
+	display: inline-block; 
+	vertical-align:top; 
+	margin-left:10px;
+
+}
+
+.corpo .dados .fotol, .corpo .dados .infos 
+{
+	display: inline-block; 
+	vertical-align:top; 
+	margin-left:10px
+}
+
+
+
+
+
+
+.corpo .dados .detalhes 
+{text-align: center;}
+
+.corpo .dados .detalhes label 
+{
+	position: relative; 
+	margin-left: 10px; 
+	padding: 10px;
+	font-size: 18px; 
+	text-align: center;
+}
+
+.corpo .dados .detalhes input 
+{
+	position: relative; 
+	margin-left: 10px; 
+	padding: 10px; 
+	font-size: 18px; 
+	text-align: center; 
+	cursor: pointer;
+}
+
+br
+{
+	margin-top: 10px; 
+	margin-bottom: 10px;
+}
+
+button 
+{position: relative; 
+	margin-left: 40px; 
+	padding: 10px; 
+	font-size: 18px;
+}
+
+a 
+{
+	position: relative; 
+	padding: 10px; 
+	font-size: 18px;
+}
