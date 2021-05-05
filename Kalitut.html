@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Css/header.css">
+    <link rel="stylesheet" href="Css/base.css">
+
+    <title> Tutorial de Instalação Kali Linux </title>
+</head>
+<body>
+    <header>
+        <a href="Index.html"> <img class="logo" src="images/logol2hack.svg" alt="logo"> </a> 
+         <nav> 
+                <ul class="abas">
+                       <li><a href="Dashboard.html"> Dashboard </a></li>
+                       <li><a href="learn.html"> Learn </a></li>
+                       <li><a href="help.html"> Help </a></li>
+                </ul>
+         </nav>
+
+         <div class="botoes">
+            <a class="cta" href="login.html"> <button> Login </button> </a>
+            <a class="cta" href="cadastro.html"> <button> Cadastre-se </button> </a>
+
+     </div>
+
+  </header>
+
+  <section>
+      <div class="conteudo">
+          <h1> Tutorial de Instalação do Kali Linux </h1>
+
+          <h2>O que é o Kali linux?</h2>
+          <p>  O Kali Linux é um projeto de código aberto que é mantido e financiado pela Offensive Security, um provedor de treinamento de 
+              segurança de informações de classe mundial e serviços de teste de penetração. </p>
+            <p>
+                Além disso, esta distribuição Linux é uma reconstrução completa do BackTrack Linux, que adere totalmente aos padrões de desenvolvimento 
+                do Debian.
+            </p>
+
+            <p>  Uma infraestrutura completamente nova foi montada, todas as ferramentas foram revistas e empacotadas.</p>
+
+          <h2> Requisitos do sistema </h2>
+          <p>O Kali é suportado nas plataformas i386, amd64 e ARM (tanto armel e armhf). Os requisitos de hardware são mínimos.</p>
+
+          <h2> Pré requisitos de instalção </h2>
+          <p>  No mínimo 20 Gb de espaço em disco.</p>
+          <p>  Mínimo de 2Gb de memória Ram </p>
+
+          <h2> Procedimento de Instalação </h2>
+          <p> A forma de Instalação que eu indico é a instalação por virtualização, visto que o Kali Linux não é uma sistema recomendado para
+              tarefas diferentes do "Pentesting" já que não possui interfaces gráficas e nem suporte para diversos programas que usamos no dia a dia.
+          </p>
+
+          <p> Dito isso vamos para de enrolação e efetuar o download, como nosso Kali Linux irá funcionar por virtualização a primeira coisa que iremos
+              precisar é a ferramenta de virtualização, a ferramentaa que eu recomendo e ensinarei nesse tutorial é a Oracle Virtual Box. </p>
+
+              <p>O Oracle Virtual Box pode ser encontrado no seguinte link:<a href="https://www.virtualbox.org/wiki/Downloads">Oracle Virtual Box</a> 
+            </p> 
+            <br>
+
+              <img src="images/Instalação VM BOX.jpg" alt="Pagina de Instalação Virtual Box">
+
+              <br>
+
+              <p>Ao acessar aparecerar essa tela, é necessário baixar os dois, tanto o Virtual box quanto o extension pack para evitar qualquer 
+                erro que possa ocorrer devido ao Kali no futuro.</p>
+
+                <p>Na legenda de numero 1 você deve selecionar o sistema operacional que está utilizando.</p>
+
+                <p>OBS: se no final de todo esse processo o Virtual Box não estiver funcionando é porque o seu dispositivo não está com a virtualização
+                    ativa, mas não se desespere, é bem simples de resolver, você precisa apenas reiniciar o seu computador e durante a reinicializaçãao
+                    ativar o menu de boot.
+                </p>
+
+                <p>Dependendo do Sistema Operacional, placa mãe a opção pode estar em alguma localização diferente então é só buscar nesse menu a opção
+                    "Permitir virtualização" ou então "Virtualization --> Disable | Vitualization --> Enable".</p>
+
+                    <p>Após o Virtual Box estar instalado vamos partir para o Kali Linux e finalmente baixa-lo.</p>
+                    <p>Como estamos trabalhando com virtualização é necessário baixar uma imagem do Sistema operacional para então inicia-la no 
+                        Virtual Box. as Imagens para download estão disponiveis no seguinte 
+                        link: <a href="https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/#1572305786534-030ce714-cc3b"> 
+                            offensive-security</a> </p>
+                            <br>
+                            <img src="images/Kali Linux Download.jpg" alt="Kali download">
+                            <br>
+                            <p>Após isso é só dar 2 cliques no arquivo OVA baixado e ele irá abrir a guia de importação do Virtual box e ai é só
+                                confirmar e aguardar que ele irá iniciar o seu Kali Linux dentro do Virtual Box.
+                            </p>
+      </div>
+  </section>
+
+  <div class="rodape">
+    <h3>Siga a gente no Instagram</h3>
+
+    <p> @arcurio.junior </p>
+    <p>@lucaats</p>
+</div>
+    
+</body>
+</html>

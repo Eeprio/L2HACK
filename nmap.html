@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Css/header.css">
+    <link rel="stylesheet" href="Css/base.css">
+
+    <title> Tutorial Nmap e Port Scanning </title>
+</head>
+
+<body>
+    <header>
+        <a href="Index.html"> <img class="logo" src="images/logol2hack.svg" alt="logo"> </a> 
+         <nav> 
+                <ul class="abas">
+                       <li><a href="Dashboard.html"> Dashboard </a></li>
+                       <li><a href="learn.html"> Learn </a></li>
+                       <li><a href="help.html"> Help </a></li>
+                </ul>
+         </nav>
+
+         <div class="botoes">
+            <a class="cta" href="login.html"> <button> Login </button> </a>
+            <a class="cta" href="cadastro.html"> <button> Cadastre-se </button> </a>
+
+     </div>
+
+  </header>
+
+  <section>
+
+  <div class="conteudo">
+      <h1> Tutorial Nmap e Port Scanning </h1>
+      <h2>O que é o Port Scanning?</h2>
+      <p>Port Scanning é um método de verificar qual porta em um serviço de internet está aberta podendo receber ou enviar algum dado, ou qual 
+          está fechada e inativa. É um processo que ao enviar pacotes para certas portas vê qual delas está respondendo e se há alguma vulnerabilidade
+        </p>
+          <p>
+            O objetivo por trás do Port Scanning é identificar a organização dos endereços IP, hosts e portas para determinar adequadamente
+             os locais dos servidores abertos ou vulneráveis ​​e diagnosticar os níveis de segurança. Tanto a varredura de rede quanto de porta podem 
+             revelar a presença de medidas de segurança em vigor, como um firewall entre o servidor e o dispositivo do usuário.   
+          </p>
+          <p>
+              É importante ressaltar que o Port Scanning pode ser usada pelos admnistraddores de TI e cibercriminosos para verificar as politicas 
+              de segurança de uma rede e identificar vulnerabilidades. Também é importante informar que usaremos bastante Port Scanning pois é um etapa
+              essêncial. 
+          </p>
+          <p>"Conheces teu inimigo e conhece-te a ti mesmo; se tiveres cem combates a travar, cem vezes serás vitorioso. Se ignoras teu inimigo e 
+              conheces a ti mesmo, tuas chances de perder e de ganhar serão idênticas. Se ignoras ao mesmo tempo teu inimigo e a ti mesmo, só contarás 
+              teus combates por tuas derrotas." - Sun Tzu</p>
+
+              <h2>O que são portas?</h2>
+              <p>Falamos sobre o Port Scanning e já entendemos do que se trata mas então o que são portas e quantas existem?</p>
+              <p>As portas do computador são o ponto de encaixe central para o fluxo de informações de um programa ou da Internet para um dispositivo ou 
+                  outro computador na rede e vice-versa. 
+              </p>
+              <p>Os números das portas são usados ​​para consistência e programação. O número da porta combinado com um endereço IP formam as informações
+                   vitais mantidas por todos os provedores de serviços de Internet para atender às solicitações. As portas variam de 0 a 65.536 e 
+                   são classificadas basicamente por popularidade.</p>
+                   <p>
+                    As portas de 0 a 1023 são números de porta bem conhecidos, projetados para uso na Internet, embora também possam ter 
+                    finalidades especializadas. Eles são administrados pela Autoridade para Atribuição de Números da Internet (IANA). 
+                    Essas portas são mantidas por empresas de primeira linha, como Apple QuickTime, MSN, serviços SQL e outras organizações 
+                    importantes. Você pode reconhecer algumas das portas mais proeminentes e seus serviços atribuídos:
+                   </p>
+
+                   <div class="tab">
+                    <ul>
+                        <li>PORT 20 (UDP) - Contém o protocolo de transferência de arquivos (FTP) usado para transferência de dados.</li>
+                        <li>PORT 22 (TCP) - contém o protocolo Secure Shell (SSH) para logins seguros, ftp e encaminhamento de porta.</li>
+                        <li>PORT 53 (UDP) - é o Sistema de Nome de Domínio (DNS) que traduz nomes em endereços IP.</li>
+                        <li>PORT 80 (TCP) - é o HTTP da World Wide Web (www) e geralmente é a página inicial do site.</li>
+                    </ul>
+                   </div>
+
+                   <p>Tá, agora você deve estar pensando "Já sei quais são as portas que existem mas o que é esse TCP e UDP que aparece do lado?"</p>
+                   <p>TCP e UDP são protocolos de redes, existem vários mas esses costumam ser os principais. TCP vem de Transmission Control Protocol
+                       e UDP de User Datagram Protocol.
+                   </p>
+                   <p>
+                    Embora o TCP seja uma transmissão de dados confiável e bidirecional, que depende do status do destino para concluir um envio 
+                    bem-sucedido, o UDP não tem conexão e não é confiável. Os dados enviados por meio do protocolo UDP são entregues sem 
+                    preocupação com o destino. Portanto, não é garantido que os dados cheguem.
+                   </p>
+
+                   <h2>Quais formas diferentes existem de varrer portas?</h2>
+                   <div class="tab">
+                       <ul>
+                           <li>Varreduras de ping: Basicamente o programa envia um pacote de dados ao servidor e aguarda a resposta.</li>
+                           <img src="/images/varredura de ping.png" alt="varredura de ping">
+                           <li>Varreduras semi-abertas ou SYN (synchronize):Esta varredura apenas envia uma mensagem SYN e não completa a conexão, 
+                               deixando o alvo travado. É uma técnica rápida e sorrateira destinada a encontrar portas abertas em potencial nos 
+                               dispositivos de destino.</li>
+                               <img src="images/tcp-syn.jpg" alt="Comunicação Syn">
+                            <li>XMAS scans: Os XMAS enviam pacotes com todos os sinalizadores - incluindo FIN - sem esperar resposta, o que significa 
+                                que a porta está aberta. Se a porta estiver fechada, uma resposta RST será recebida. A varredura do XMAS raramente 
+                                aparece nos logs de monitoramento e é simplesmente uma maneira mais sorrateira de aprender sobre a proteção e o 
+                                firewall de uma rede.</li>
+                                <img src="/images/xmas.jpeg" alt="">
+                       </ul>
+                   </div>
+
+                   <h2>Nmap</h2>
+
+                   <p>
+                       Agora que já vimos o que é o Port Scanning, sem mais delongas vamos ver o nosso protagonista o Nmap.
+                   </p>
+
+                   <p>A coisa mais importante sobre o Nmap é que ele tem muitas funções, tipo muitas funções mesmo. Se já tiver o Kali linux instalado 
+                       recomendo abrir o terminal e digitar o comando "man nmap" que lá estarão todos os comandos e todas as formas que o nmap pode 
+                       ser utilizado ou então acessar o site oficial <a href="https://nmap.org/">nmap.org</a> para mais informações pois nesse Tutorial
+                       iremos ver o básico dessa ferramenta.
+                   </p>
+
+                   <p>
+                    Nmap ("Network Mapper") é um código livre e aberto ( licença) utilitário para descoberta de rede e auditoria de segurança. 
+                    Muitos sistemas e administradores de rede também o consideram útil para tarefas como inventário de rede, gerenciamento de 
+                    agendas de atualização de serviço e monitoramento de host ou tempo de atividade de serviço. O Nmap usa pacotes IP brutos de novas 
+                    maneiras para determinar quais hosts estão disponíveis na rede, quais serviços (nome do aplicativo e versão) esses hosts estão 
+                    oferecendo, quais sistemas operacionais (e versões de SO) eles estão executando, que tipo de filtros de pacotes / firewalls estão 
+                    em uso e dezenas de outras características. Ele foi projetado para fazer a varredura rapidamente em grandes redes, mas funciona 
+                    bem em hosts únicos. O Nmap é executado em todos os principais sistemas operacionais de computador, e pacotes binários oficiais 
+                    estão disponíveis para Linux, Windows e Mac OS X. Trecho retirado de:<a href="https://nmap.org/">nmap.org</a>
+                   </p>
+
+                   <p>
+                       OBS: O nmap contava com uma interface gráfica chamada Zenmap que não existe mais, mas no seu lugar é possível utilizar o Legion
+                       que para iniciantes pode ser mais convidativo.
+                   </p>
+
+                   <p>
+                       mas bem vamos agora a estrutura do Nmap e como utilizar
+                   </p>
+
+                   <h3>nmap [Scan type(s)] [options] {Target Specification}</h3>
+                   <br>
+
+                   <div class="tab">
+                    <ul>
+                        <li>Scan Type: pode ser traduzido como tipo de Scan nessa parte do código você deve escolher dentre as opções qual será o tipo
+                            de varredura a ser feita, se vai ser um SYN scan, um SYN ACK scan, um XMAS.
+                        </li>
+                        <li>Options: Você deverá escolher as opções do seu Scan, então se terá Verbalização, se precisará desviar algum firewall que 
+                            bloqueia o scaneamento, pode ser selecionada uma faixa de portas para se verificar como por exemplo realizar uma verificação
+                             da porta 0 até a 5000 e também mas não menos importante é possível selecionar a intencidade do scaneamento se vai ser bruto
+                             ou mais lento e sorrateiro.
+                        </li>
+                        <li>Target Specification: É onde você deverá colocar ou o link do alvo (Ex: Google.com) ou o ip do alvo (172.217.29.14)
+                             para que o Nmap realize a varredura.</li>
+                    </ul>
+                   </div>
+                   
+  </div>
+
+</section>
+
+  <footer>
+    <div class="rodape">
+        <h3>Siga a gente no Instagram</h3>
+
+        <p> @arcurio.junior </p>
+        <p>@lucaats</p>
+ </div>
+  </footer>
+</body>
